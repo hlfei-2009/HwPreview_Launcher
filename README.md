@@ -12,9 +12,11 @@ Android 系统 打开方式选择器：
 
 # 为什么在打开方式选择器上不显示华为 文件预览 应用？
 这是因为在华为 文件预览 应用的 AndroidManifest.xml 中有
-<meta-data
+
+meta-data
                 android:name="ChooseDisabled"
                 android:value="true" />
+
 标签，并且应用于 com.huawei.hwpreview.HwPreviewActivity 活动。所以会不显示。
 
 # 其他设备制造商的设备能使用此应用吗？
