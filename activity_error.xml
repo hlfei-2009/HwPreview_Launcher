@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 这是此应用 .ErrorActivity 的布局 xml 文件，用于显示错误说明 -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 显示错误说明概括，并在其左边显示警告图标 -->
+        <TextView
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="start|center_vertical"
+            android:paddingTop="18dp"
+            android:paddingBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cant_start_hwpreview"
+            android:drawablePadding="16dp"
+            android:drawableStart="@drawable/ic_dialog_alert"
+            android:paddingStart="?android:attr/dialogPreferredPadding"
+            android:paddingEnd="?android:attr/dialogPreferredPadding" />
+
+        <!-- 显示错误说明 -->
+        <TextView
+            android:textSize="18sp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hwpreview_hwpreviewactivity_not_found"
+            android:paddingStart="?android:attr/dialogPreferredPadding"
+            android:paddingEnd="?android:attr/dialogPreferredPadding" />
+
+        <!-- 用于通过点按右下角的“确定”按钮快捷退出应用 -->
+        <LinearLayout
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            style="?android:attr/buttonBarStyle">
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1.0" />
+
+            <!-- 显示“确定”按钮的关键 -->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@android:string/yes"
+                android:onClick="onCancelButtonClicked"
+                style="?android:attr/buttonBarNegativeButtonStyle" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
